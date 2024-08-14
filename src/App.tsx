@@ -1,5 +1,11 @@
-import "./App.css";
+import { ReactElement } from 'react';
+import { Outlet } from 'react-router-dom';
+//import "./App.css";
 
-export function App() {
-  return <>This is the App Component!</>;
+export function App(): ReactElement {
+  return (
+    <div className="App">
+      <Outlet />
+    </div>
+  );
 }
