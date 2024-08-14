@@ -23,3 +23,14 @@ export interface ISearchResultsProps {
 export interface ISearchFormProps {
   onSearch: (query: string) => void;
 }
+
+export interface ICocktailDetails extends ICocktail {
+  strCategory: string;
+  strTags: string | null;
+  strGlass: string;
+  [key: string]: string | null; 
+}
+
+export interface ICocktailInfoProps {
+  cocktail: ICocktailDetails;
+}
