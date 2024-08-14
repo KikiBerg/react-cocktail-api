@@ -6,8 +6,11 @@
   --color-tertiary: #b8a89a;
   --color-accent-1: #6dca9f;
   --color-accent-2: #33946c;
-  --color-offwhite: #fff7ed;
+  --color-offwhite: #fff7eb;
   --color-grey: #dfe0df;
+  --color-grey-dark: #b1b3b1;
+  --color-grey-light: #f0f0f0;
+  --color-white: #f9f6f6;
 
   --font-family: 'Reddit Mono', monospace;
 }
