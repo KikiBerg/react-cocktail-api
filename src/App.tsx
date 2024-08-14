@@ -1,19 +1,12 @@
 import { ReactElement } from 'react';
-import { Outlet, Link, useLocation } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
+import { Header } from './components/Header';
 import './App.css';
 
 export function App(): ReactElement {
-  const location = useLocation();
-
   return (
     <div className="App">
-      <header>
-        <h1>Cocktail Wiki</h1>
-        <nav>
-          <Link to="/" className={location.pathname === '/' ? 'active' : ''}>Home</Link>
-          <Link to="/search" className={location.pathname === '/search' ? 'active' : ''}>Search</Link>
-        </nav>
-      </header>
+      <Header />
       <main>
         <Outlet />
       </main>
