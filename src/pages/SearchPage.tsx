@@ -21,6 +21,10 @@ export function SearchPage() : ReactElement {
             setSearchResults([]);
         }
     };
+    
+    const handleCocktailSelect = (id: string) => {
+        navigate(`/cocktail/${id}`);
+    };
 
     
 }
