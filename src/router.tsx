@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom"; 
-import { LandingPage, SearchPage } from './pages';
+import { CocktailInfoPage, LandingPage, SearchPage } from './pages';
 
 
 export const router = createBrowserRouter ([
@@ -10,5 +10,9 @@ export const router = createBrowserRouter ([
     {
         path: '/search',
         element: <SearchPage/>,
+    },
+    {
+        path: '/coctail/:id',
+        element: <CocktailInfoPage/>,
     },
 ]);
