@@ -8,7 +8,7 @@ export function SearchResults({
   onPageChange,
   onCocktailSelect,
 }: ISearchResultsProps): ReactElement {
-  const itemsPerPage = 8;
+  const itemsPerPage = 10;
   const totalPages = Math.ceil(results.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
@@ -27,16 +27,18 @@ export function SearchResults({
         ))}
       </ul>
       {totalPages > 1 && (
-        <div className="pagination">
-          {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-            <button
-              key={page}
-              onClick={() => onPageChange(page)}
-              className={currentPage === page ? 'active' : ''}
-            >
-              {page}
-            </button>
-          ))}
+        <div className="pagination-container">
+          <div className="pagination">
+            {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+              <button
+                key={page}
+                onClick={() => onPageChange(page)}
+                className={currentPage === page ? 'active' : 'inactive'}
+              >
+                {page}
+              </button>
+            ))}
+          </div>
         </div>
       )}
     </div>
