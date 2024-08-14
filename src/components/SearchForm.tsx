@@ -1,5 +1,6 @@
 import React, { ReactElement, useState } from 'react';
 import { ISearchFormProps } from '../interfaces';
+import '../css/SearchPage.css';
 
 export function SearchForm({ onSearch }: ISearchFormProps): ReactElement {
   const [query, setQuery] = useState('');
