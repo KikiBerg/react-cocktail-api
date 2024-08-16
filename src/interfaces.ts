@@ -21,7 +21,7 @@ export interface ISearchResultsProps {
 }
 
 export interface ISearchFormProps {
-  onSearch: (query: string) => void;
+  onSearch: (params: ISearchParams) => void;
 }
 
 export interface ICocktailDetails extends ICocktail {
@@ -33,4 +33,11 @@ export interface ICocktailDetails extends ICocktail {
 
 export interface ICocktailInfoProps {
   cocktail: ICocktailDetails;
+}
+
+export interface ISearchParams {
+  name?: string;
+  category?: string;
+  ingredient?: string;
+  glass?: string;
 }
