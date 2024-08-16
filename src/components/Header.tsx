@@ -12,11 +12,23 @@ export function Header(): ReactElement {
         <Link to="/" className={location.pathname === '/' ? 'active' : ''}>
           Home
         </Link>
-        <Link to="/search" className={location.pathname === '/search' ? 'active' : ''}>
+        <Link
+          to="/search"
+          className={location.pathname === '/search' ? 'active' : ''}
+        >
           Search
         </Link>
-        <Link to="/random" className={location.pathname === '/random' ? 'active' : ''}>
+        <Link
+          to="/random"
+          className={location.pathname === '/random' ? 'active' : ''}
+        >
           Random Cocktail
+        </Link>
+        <Link
+          to="/favorites"
+          className={location.pathname === '/favorites' ? 'active' : ''}
+        >
+          Favorites
         </Link>
       </nav>
     </header>

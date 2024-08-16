@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom"; 
 import { App } from './App';
-import { CocktailInfoPage, LandingPage, SearchPage, RandomCocktailPage } from './pages';
+import { CocktailInfoPage, LandingPage, SearchPage, RandomCocktailPage, FavoritesPage } from './pages';
 
 
 export const router = createBrowserRouter([
@@ -23,6 +23,10 @@ export const router = createBrowserRouter([
       {
         path: 'random',
         element: <RandomCocktailPage />,
+      },
+      {
+        path: 'favorites',
+        element: <FavoritesPage />,
       },
     ],
   },
