@@ -65,8 +65,10 @@ export function SearchForm({ onSearch }: ISearchFormProps): ReactElement {
         {glassTypes.map(glass => (
           <option key={glass} value={glass}>{glass}</option>
         ))}
-      </select>
-      <button type="submit">Search</button>
+      </select>      
+      <div className="button-container">
+        <button type="submit">Search</button>
+      </div>
     </form>
   );
 }
