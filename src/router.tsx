@@ -23,11 +23,7 @@ export const router = createBrowserRouter([
       {
         path: 'random',
         element: <RandomCocktailPage />,
-      },
-      {
-        path: 'favorites',
-        element: <FavoritesPage />,
-      },
+      },      
     ],
   },
 ]);

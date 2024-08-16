@@ -23,13 +23,7 @@ export function Header(): ReactElement {
           className={location.pathname === '/random' ? 'active' : ''}
         >
           Random Cocktail
-        </Link>
-        <Link
-          to="/favorites"
-          className={location.pathname === '/favorites' ? 'active' : ''}
-        >
-          Favorites
-        </Link>
+        </Link>       
       </nav>
     </header>
   );

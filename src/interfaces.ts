@@ -42,13 +42,3 @@ export interface ISearchParams {
   glass?: string;
 }
 
-export interface IFavorite {
-  idDrink: string;
-  strDrink: string;
-  strDrinkThumb: string;
-}
-
-export interface IFavoritesPageProps {
-  favorites: IFavorite[];
-  removeFavorite: (id: string) => void;
-}
