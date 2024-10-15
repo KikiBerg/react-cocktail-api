@@ -1,123 +1,72 @@
-![poster](./src/assets/poster.png)
+# React Cocktail API
 
-# The Cocktail DB
+Link to live website: [CLICK HERE!](https://react-cocktail-api.vercel.app/)
 
-<details>
-  <summary>Table of Content</summary>
+![Am I Responsive Image](src\assets\cocktail-api-mockup.png)
 
-- [Instructions](#instructions)
-- [Requirements](#requirements)
-  - [Landing Page](#landing-page-random-cocktail)
-  - [Search Page](#search-page)
-  - [Cocktail Info Page](#cocktail-info-page)
-- [Bonus Features](#bonus-features---choose-your-challenges)
-  - [Search Page++](#search-page-1)
-  - [Favorites Page](#favorites-page)
-  - [Ingredient Page](#ingredient-page)
-  - [General features](#general-features)
+## Project Overview
 
-</details>
+This project is a cocktail recipe web application built with React and TypeScript. It fetches cocktail data from the [Cocktail DB API](https://www.thecocktaildb.com/api.php) and presents it in a dynamic user interface. The app allows users to explore various cocktail recipes, search by ingredients or names, and view detailed information about each drink.
 
-## Instructions
+The web application consists of several pages:
+- **Landing Page**: A random cocktail is displayed.
+- **Search Page**: Users can search for cocktails using names or ingredients.
+- **Cocktail Info Page**: Displays detailed information about a selected cocktail.
 
-Your are building a cocktail-wiki that uses data from [The Cocktail DB API](https://www.thecocktaildb.com/api.php). You can see an example of a cocktail-wiki on their [The Cocktail DB Home Page](https://www.thecocktaildb.com/).
+## Features
 
-The web application will have atleast three different pages.
+1. **Search for Cocktails by Name or Ingredient**  
+   Users can search for cocktails using either the name of the cocktail or a list of ingredients. This allows users to either look for a specific drink they have in mind or find a drink based on the ingredients they already have. For example, a user could search for all cocktails containing "vodka" or search for a specific cocktail like "Margarita." The search results are presented in a list format, showing a brief overview of each cocktail found.
+
+2. **Random Cocktail Generator**  
+   On the landing page, users are greeted with a randomly selected cocktail, allowing them to discover new drinks without searching. This feature refreshes and shows a new cocktail every time the user visits the page or clicks a button for a new suggestion. Each random cocktail comes with its image, name, and a link to detailed information.
+
+3. **Detailed Cocktail Information**  
+   When a user selects a specific cocktail from the search results or the random cocktail generator, they are taken to the "Cocktail Info Page," which shows comprehensive details about the drink. This includes the name of the drink, its category (e.g., cocktail, shot), the glass type (e.g., martini glass, highball glass), ingredients, measurements for each ingredient, and preparation instructions. The cocktail’s image is also displayed prominently.
+
 
 ## Requirements
 
-- Create the application using Vite and React Typescript.
-- It is allowed to use CSS-frameworks in this assignment. But i rather you didn't. The focus should be and the React part and the logic but don't forget about the CSS.
+- React with TypeScript.
+- Vite as the build tool.
+- Use of CSS frameworks is allowed but not required.
 
-[Back to top](#the-cocktail-db)
+## Pages and Components
 
-### Landing Page (Random Cocktail)
 
-- The user should be presented with a random cocktail when visiting the this page.
+1. **Landing Page (Random Cocktail Page)**  
+   The landing page serves as the introduction to the app. Every time the page is loaded, a random cocktail is fetched from the API and displayed. This page has a clean design with the cocktail’s image, name, and a "more details" button that leads to the Cocktail Info Page. If the user wishes, they can click a button to generate a new random cocktail, giving them an opportunity to discover different drinks in an interactive way.
 
-- The user should be able to get a random cocktail by clicking some sort of button.
+2. **Search Page**  
+   The search page allows users to search for cocktails by entering a name or ingredient. This page features a search bar that dynamically fetches and filters results based on user input. Once a search is performed, the results are displayed as a list of cocktails, each showing the cocktail's name, a thumbnail image, and a short description. Clicking on any cocktail in the list will navigate the user to the detailed Cocktail Info Page.
 
-- The name and a image of the cocktail should be presented as a card.
+3. **Cocktail Info Page**  
+   The Cocktail Info Page is a more detailed view of a single cocktail. This page provides:
+   - **Drink Name**: The name of the selected cocktail.
+   - **Category**: The type of drink, such as "cocktail" or "shot."
+   - **Glass Type**: Information on the type of glass used to serve the drink.
+   - **Ingredients and Measurements**: A list of ingredients required for the drink, along with the exact measurements needed to prepare it.
+   - **Instructions**: Step-by-step preparation instructions to make the cocktail.
+   - **Tags and Additional Info**: Sometimes, the page may also display tags like "alcoholic" or "non-alcoholic" or any other special info.
+   The page is user-friendly, with a prominent image of the drink, making it easy for users to follow the recipe.
 
-- The uses should be able to click on **See more** to get to the `Cocktail Info Page` _(see more info further down)_.
+4. **Header and Navigation Component**  
+   The header component contains the app's navigation, allowing users to easily switch between the landing page, search page, and favorites page. It also includes the app's logo or title, creating a consistent layout for all pages.
 
-[Back to top](#the-cocktail-db)
+5. **Cocktail Card Component**  
+   Each cocktail in the search results or favorites is displayed in a consistent card format. The card shows a thumbnail of the cocktail, its name, and a short description. Clicking on the card takes the user to the Cocktail Info Page. This component makes it easy to browse through multiple cocktails in an organized and visually appealing way.
 
-### Search Page
+6. **Footer Component**  
+   The footer provides additional navigation links and possibly some branding or credits. It ensures that users can access important links no matter where they are on the site.
 
-- The user should be able to search for a cocktail using its name.
+## Instructions
 
-- The page should have a form on it that is using the submit event.
+To get started, clone the repository and run the following commands:
 
-- The results of the search should be displayed in a list. Only the name of the cocktails should be in this list.
+```bash
+npm install
+npm run dev
+```
 
-- The list can contain a maximum of 10 results. If there are more than 10 cocktails in the results, the list should be paginated.
+---
 
-- If you click on a cocktail in the list, you should go to the `Cocktail Info Page`.
-
-[Back to top](#the-cocktail-db)
-
-### Cocktail Info Page
-
-- This page should only be possible to reach through one of the pages above.
-
-- On this page the user should get detailed information on a specific cocktail including the following:
-
-  - Category
-  - Image
-  - Tags
-  - Ingredients and Measurements
-  - The proper glass to serve it in
- 
-On this page it could be a good opportunity to learn about dynamic segments in React Router: [Dynamic segments](https://reactrouter.com/en/main/route/route#dynamic-segments) **Observe**: this is not required in order to solve the exercise.
-
-  [Back to top](#the-cocktail-db)
-
-## Bonus features - choose your challenges..
-
-### Search Page++
-
-- The user should be able to to advanced searches.
-- The use should be able to search on one of thes parameters or a combination of them:
-
-  - Category
-  - Ingredient
-  - Glass type
-
-- The search form should contain relevant validation.
-- Cache the results. If you revisit a beer, you shouldn't need to make another request to the API.
-
-[Back to top](#the-cocktail-db)
-
-### Favorites Page
-
-- The user should be able to save their favorite cocktails and view them on a separate page.
-
-- The user should be able to remove favorite cocktails.
-- Persist favorites using local storage.
-
-[Back to top](#the-cocktail-db)
-
-### Ingredient Page
-
-- By clicking on an ingredient in the user should be able to see detail information on an Ingredient Page. Information including:
-
-  - Name
-  - Description
-  - isAlcohol or not
-  - Type
-  - If Alcohol, its ABV _( alcohol by volume )_
-
-- Display other cocktails and drinks that includes the specific ingredient.
-
-[Back to top](#the-cocktail-db)
-
-### General features
-
-- The user should be able to browse cocktails by category and ingredient on different pages.
-- Try infinitive scroll for large data sets instead of pagination.
-- Add error handling for API request and display user-friendly error messages.
-- Implement loading states and placeholders for data fetching.
-- The user should be able to only display non alcoholic drinks.
-
-[Back to top](#the-cocktail-db)
