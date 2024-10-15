@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom"; 
 import { App } from './App';
-import { CocktailInfoPage, LandingPage, SearchPage, RandomCocktailPage, FavoritesPage } from './pages';
+import { CocktailInfoPage, LandingPage, SearchPage, RandomCocktailPage } from './pages';
 
 
 export const router = createBrowserRouter([
