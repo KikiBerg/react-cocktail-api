@@ -2,13 +2,14 @@
 
 Link to live website: [CLICK HERE!](https://react-cocktail-api.vercel.app/)
 
-![Am I Responsive Image](src\assets\cocktail-api-mockup.png)
+![Am I Responsive Image](src/assets/cocktail-api-mockup.png)
 
 ## Project Overview
 
 This project is a cocktail recipe web application built with React and TypeScript. It fetches cocktail data from the [Cocktail DB API](https://www.thecocktaildb.com/api.php) and presents it in a dynamic user interface. The app allows users to explore various cocktail recipes, search by ingredients or names, and view detailed information about each drink.
 
 The web application consists of several pages:
+
 - **Landing Page**: A random cocktail is displayed.
 - **Search Page**: Users can search for cocktails using names or ingredients.
 - **Cocktail Info Page**: Displays detailed information about a selected cocktail.
@@ -24,7 +25,6 @@ The web application consists of several pages:
 3. **Detailed Cocktail Information**  
    When a user selects a specific cocktail from the search results or the random cocktail generator, they are taken to the "Cocktail Info Page," which shows comprehensive details about the drink. This includes the name of the drink, its category (e.g., cocktail, shot), the glass type (e.g., martini glass, highball glass), ingredients, measurements for each ingredient, and preparation instructions. The cocktail’s image is also displayed prominently.
 
-
 ## Requirements
 
 - React with TypeScript.
@@ -32,7 +32,6 @@ The web application consists of several pages:
 - Use of CSS frameworks is allowed but not required.
 
 ## Pages and Components
-
 
 1. **Landing Page (Random Cocktail Page)**  
    The landing page serves as the introduction to the app. Every time the page is loaded, a random cocktail is fetched from the API and displayed. This page has a clean design with the cocktail’s image, name, and a "more details" button that leads to the Cocktail Info Page. If the user wishes, they can click a button to generate a new random cocktail, giving them an opportunity to discover different drinks in an interactive way.
@@ -42,13 +41,14 @@ The web application consists of several pages:
 
 3. **Cocktail Info Page**  
    The Cocktail Info Page is a more detailed view of a single cocktail. This page provides:
+
    - **Drink Name**: The name of the selected cocktail.
    - **Category**: The type of drink, such as "cocktail" or "shot."
    - **Glass Type**: Information on the type of glass used to serve the drink.
    - **Ingredients and Measurements**: A list of ingredients required for the drink, along with the exact measurements needed to prepare it.
    - **Instructions**: Step-by-step preparation instructions to make the cocktail.
    - **Tags and Additional Info**: Sometimes, the page may also display tags like "alcoholic" or "non-alcoholic" or any other special info.
-   The page is user-friendly, with a prominent image of the drink, making it easy for users to follow the recipe.
+     The page is user-friendly, with a prominent image of the drink, making it easy for users to follow the recipe.
 
 4. **Header and Navigation Component**  
    The header component contains the app's navigation, allowing users to easily switch between the landing page, search page, and favorites page. It also includes the app's logo or title, creating a consistent layout for all pages.
@@ -69,4 +69,3 @@ npm run dev
 ```
 
 ---
-
